@@ -1,0 +1,5 @@
+/* modules/cash/cash.css · Pantalla de caja */
+.diff{font-size:30px;font-weight:800}
+.diff.ok{color:var(--green)}
+.diff.neg{color:var(--red)}
+.diff.pos{color:#b57800}
