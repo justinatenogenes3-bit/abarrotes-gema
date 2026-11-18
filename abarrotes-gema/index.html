@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102c50">
+  <title>Abarrotes Gema | Punto de Venta</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+  <!-- Estilos: base compartida + uno por módulo -->
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="modulos/acceso/acceso.css">
+  <link rel="stylesheet" href="modulos/ventas/ventas.css">
+  <link rel="stylesheet" href="modulos/caja/caja.css">
+</head>
+<body>
+  <div id="pantallaAcceso" class="acceso oculto"></div>
+
+  <div id="aplicacion" class="app oculto">
+    <aside class="sidebar">
+      <div class="brand">🛒 Abarrotes<br><span>Gema</span></div>
+      <nav id="menu" class="navlist"></nav>
+      <div class="sidefoot" id="pieMenu"></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="status" id="estadoConexion"></div>
+        <div class="status" id="estadoPendientes"></div>
+        <div class="spacer"></div>
+        <div class="who"><b id="nombreUsuario"></b><span id="rolUsuario"></span></div>
+        <button id="btnSalir">Salir</button>
+      </header>
+      <div class="content" id="vista"></div>
+    </main>
+  </div>
+
+  <div id="raizVentana"></div>
+  <div id="raizAviso"></div>
+
+  <!-- 1) Núcleo de datos -->
+  <script src="nucleo/almacen.js"></script>
+
+  <!-- 2) Datos y reglas de cada módulo (se conectan al Almacen) -->
+  <script src="modulos/inventario/inventario.datos.js"></script>
+  <script src="modulos/caja/caja.datos.js"></script>
+  <script src="modulos/ventas/ventas.datos.js"></script>
+  <script src="modulos/usuarios/usuarios.datos.js"></script>
+
+  <!-- 3) Interfaz: núcleo y luego cada módulo (si uno falla, los demás siguen) -->
+  <script src="nucleo/app.js"></script>
+  <script src="modulos/acceso/acceso.js"></script>
+  <script src="modulos/ventas/ventas.js"></script>
+  <script src="modulos/inventario/inventario.js"></script>
+  <script src="modulos/caja/caja.js"></script>
+  <script src="modulos/reportes/reportes.js"></script>
+  <script src="modulos/usuarios/usuarios.js"></script>
+  <script src="modulos/configuracion/configuracion.js"></script>
+
+  <!-- 4) Arranque -->
+  <script src="nucleo/arranque.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* modulos/caja/caja.css · Pantalla de caja */
+.diferencia{font-size:30px;font-weight:800}
+.diferencia.cuadra{color:var(--green)}
+.diferencia.faltante{color:var(--red)}
+.diferencia.sobrante{color:#b57800}

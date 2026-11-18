@@ -1,0 +1,23 @@
+/* modulos/ventas/ventas.css · Pantalla de ventas */
+.pos{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,.8fr);gap:16px;align-items:start}
+.busqueda{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.busqueda .codigo{width:230px}
+.contenedor-sugerencias{position:relative;flex:1;min-width:200px}
+.contenedor-sugerencias input{width:100%}
+.sugerencias{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px #0002;z-index:8;max-height:320px;overflow:auto}
+.sugerencias button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;border:0;border-bottom:1px solid #edf2f8;border-radius:0;text-align:left;min-height:50px}
+.sugerencias button:last-child{border-bottom:0}
+.sugerencias button.activa,.sugerencias button:hover{background:var(--blue2)}
+.sugerencias small{color:var(--muted);font-weight:500}
+.control-cantidad{display:flex;align-items:center;gap:8px}
+.control-cantidad button{min-width:40px;padding:6px 10px}
+.control-cantidad span{min-width:30px;text-align:center;font-weight:700}
+.select-pago{width:100%;margin:6px 0 12px}
+.linea-cambio{display:flex;justify-content:space-between;font-size:18px;font-weight:700;padding:8px 0}
+.input-descuento{width:110px;text-align:right;min-height:38px;padding:6px 8px}
+.bloque-referencia{background:#fff8df;border:1px solid #f6df94;border-radius:10px;padding:12px;margin-bottom:6px}
+.bloque-referencia label{display:block;font-weight:700;color:var(--ink);font-size:13px}
+.bloque-referencia input{width:100%;margin:8px 0 6px;font-size:18px;min-height:50px;letter-spacing:1px}
+.lista-peso{display:grid;gap:8px}
+.lista-peso button{display:flex;justify-content:space-between;min-height:52px}
+@media(max-width:1000px){.pos{grid-template-columns:1fr}.busqueda .codigo{width:100%}}

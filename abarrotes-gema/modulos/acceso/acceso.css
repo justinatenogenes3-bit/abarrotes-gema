@@ -1,0 +1,12 @@
+/* modulos/acceso/acceso.css · Pantalla de acceso */
+.acceso{position:fixed;inset:0;z-index:40;background:linear-gradient(160deg,#102c50,#0c2038);display:grid;place-items:center;padding:16px;overflow:auto}
+.acceso-tarjeta{background:#fff;border-radius:20px;padding:28px;width:min(420px,100%);display:flex;flex-direction:column;gap:14px}
+.acceso-tarjeta .brand{border:0;color:var(--navy);font-size:30px;padding:0;margin:0;text-align:center}
+.acceso-tarjeta p{text-align:center;margin:-6px 0 0}
+.acceso-tarjeta label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
+.acceso-tarjeta select,.acceso-tarjeta input{font-size:18px;min-height:52px}
+.acceso-tarjeta input.campo-pin{letter-spacing:12px;text-align:center;font-size:26px}
+.mensaje-acceso{min-height:20px;text-align:center;font-size:14px;color:var(--red);font-weight:600}
+.acceso-tarjeta button.xl{margin-top:0}
+.sacudir{animation:sacudir .3s}
+@keyframes sacudir{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
