@@ -31,6 +31,7 @@ input.big{font-size:18px;min-height:52px}
 .sidebar{background:linear-gradient(180deg,#102c50,#0c2038);color:#fff;padding:20px 12px;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh}
 .brand{font-size:25px;font-weight:800;padding:7px 10px 20px;border-bottom:1px solid #ffffff24;margin-bottom:8px}
 .brand span{color:var(--gold)}
+.brand.larga{font-size:21px;line-height:1.2;overflow-wrap:anywhere}
 .navlist{display:flex;flex-direction:column;gap:6px}
 .nav{display:flex;align-items:center;gap:12px;text-align:left;background:transparent;color:#dbe8f7;border:0;min-height:50px;font-size:15px}
 .nav.active,.nav:hover{background:var(--blue);color:#fff}

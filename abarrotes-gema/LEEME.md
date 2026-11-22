@@ -52,3 +52,16 @@ Colecciones de datos: productos, ventas, movimientos, sesiones, usuarios.
 Hecho y probado: ventas (pieza y peso; efectivo, transferencia y tarjeta con referencia; descuento), inventario,
 caja, reportes, usuarios con PIN, respaldo JSON, modo sin conexión.
 Pendiente: Firebase (Paso 2), proveedores, pruebas reales en la tienda.
+
+## Varias tiendas (agregado)
+Al abrir el sistema primero se elige la tienda y después el usuario y el PIN. Cada tienda guarda su propia
+información (productos, ventas, caja y usuarios) y no se mezcla con la de otra. Abarrotes Gema conserva los
+datos que ya tenía. El nombre de la tienda en la que se entró aparece en la barra lateral izquierda y, al elegir usuario, en la pantalla de acceso
+(«Entrarás a: …» y el botón «Entrar a …»). El administrador ve el inventario de todas las tiendas en la opción
+**🏬 Todas las tiendas** del menú lateral (resumen por tienda + lista de productos con filtro por tienda) y puede agregar tiendas nuevas desde ahí. Archivos nuevos: `modulos/tiendas/` (tiendas.datos.js, tiendas.js, tiendas.css).
+Una tienda nueva empieza vacía, con los usuarios de ejemplo: Administrador 1234 y Cajero 1 0000.
+
+## Ticket por tienda (agregado)
+Cada tienda tiene su propio ticket (nombre, dirección, teléfono, avisos y ancho de papel 58/80 mm) en el menú **🧾 Ticket**
+(solo administrador). Al cobrar aparece «🖨️ Imprimir ticket» y en Reportes → detalle de venta, «Reimprimir ticket».
+Se puede activar la impresión automática al cobrar. Archivos: `modulos/ticket/` (ticket.js, ticket.datos.js).

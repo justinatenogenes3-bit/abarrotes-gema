@@ -1,6 +1,6 @@
 /* Service Worker: permite abrir el sistema sin internet (después de la primera carga).
    Primero intenta la red (para recibir actualizaciones); si falla usa la copia guardada. */
-const CACHE = 'gema-pos-v3';
+const CACHE = 'gema-pos-v4';
 const ARCHIVOS = [
   './', './index.html', './manifest.webmanifest', './icon.svg',
   './estilos/base.css',
@@ -11,7 +11,9 @@ const ARCHIVOS = [
   './modulos/caja/caja.css', './modulos/caja/caja.js', './modulos/caja/caja.datos.js',
   './modulos/reportes/reportes.js',
   './modulos/usuarios/usuarios.js', './modulos/usuarios/usuarios.datos.js',
-  './modulos/configuracion/configuracion.js'
+  './modulos/configuracion/configuracion.js',
+  './modulos/tiendas/tiendas.css', './modulos/tiendas/tiendas.js', './modulos/tiendas/tiendas.datos.js',
+  './modulos/ticket/ticket.js', './modulos/ticket/ticket.datos.js'
 ];
 
 self.addEventListener('install', e => {

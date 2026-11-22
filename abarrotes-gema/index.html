@@ -13,13 +13,14 @@
   <link rel="stylesheet" href="modulos/acceso/acceso.css">
   <link rel="stylesheet" href="modulos/ventas/ventas.css">
   <link rel="stylesheet" href="modulos/caja/caja.css">
+  <link rel="stylesheet" href="modulos/tiendas/tiendas.css">
 </head>
 <body>
   <div id="pantallaAcceso" class="acceso oculto"></div>
 
   <div id="aplicacion" class="app oculto">
     <aside class="sidebar">
-      <div class="brand">🛒 Abarrotes<br><span>Gema</span></div>
+      <div class="brand" id="marcaTienda">🛒 Abarrotes<br><span>Gema</span></div>
       <nav id="menu" class="navlist"></nav>
       <div class="sidefoot" id="pieMenu"></div>
     </aside>
@@ -38,6 +39,9 @@
   <div id="raizVentana"></div>
   <div id="raizAviso"></div>
 
+  <!-- 0) Tiendas: separa los datos por tienda (debe ir antes del almacén) -->
+  <script src="modulos/tiendas/tiendas.datos.js"></script>
+
   <!-- 1) Núcleo de datos -->
   <script src="nucleo/almacen.js"></script>
 
@@ -46,9 +50,12 @@
   <script src="modulos/caja/caja.datos.js"></script>
   <script src="modulos/ventas/ventas.datos.js"></script>
   <script src="modulos/usuarios/usuarios.datos.js"></script>
+  <script src="modulos/ticket/ticket.datos.js"></script>
 
   <!-- 3) Interfaz: núcleo y luego cada módulo (si uno falla, los demás siguen) -->
   <script src="nucleo/app.js"></script>
+  <script src="modulos/tiendas/tiendas.js"></script>
+  <script src="modulos/ticket/ticket.js"></script>
   <script src="modulos/acceso/acceso.js"></script>
   <script src="modulos/ventas/ventas.js"></script>
   <script src="modulos/inventario/inventario.js"></script>
